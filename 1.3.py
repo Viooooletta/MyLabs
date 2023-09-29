@@ -1,4 +1,4 @@
-list = [13, 56,  34.19, 'love']
+list = [13, 56, 'Python', 34.19, 'love']
 for i in range(len(list)):
     if type(list[i]) == int:
         if list[i] % 2 == 0:
