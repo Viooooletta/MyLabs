@@ -1,4 +1,4 @@
-my_diet = {'la':50, 'b':5, 'c':56, 'd':4, 'e':58, 'f':20}
+my_diet = {'la':50,  'c':56, 'd':4, 'e':58, 'f':20}
 
 sorted_items = sorted(my_diet.items(), key=lambda x: x[1])
 
