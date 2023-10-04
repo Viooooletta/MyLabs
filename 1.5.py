@@ -46,14 +46,26 @@ while True:
     elif choice == '5':
         toy_name = input('\nВведите название игрушки: ')
         if toy_name in toy_store:
-            quantity = int(input('\nВведите количество: '))
+
+            while True:
+                quantity = input("Введите количество игрушек: ")
+                if quantity.isdigit():
+                    quantity = int(quantity)
+
+                    break
+                else:
+                    print("Вы ввели неверное значение")
+
             if quantity <= toy_store[toy_name][2]:
                 total_price = quantity * toy_store[toy_name][1]
-                print('\nСтоимость покупки: {total_price}')
-                toy_store[toy_name][2] -= quantity
-                print('\nОсталось в магазине: {toy_store[toy_name][2]}')
+                print('\nС вас: ', total_price, 'рублей\nОплатить?\n\n1. Да\n 2. Нет\n\nВведите свой вариант: ')
+                q = input()
+                if q == '1':
+                    print('\n\nПокупка совершена успешно')
+                elif q =='2':
+                    print('\n\nПокупка была отменена')
             else:
-                print('\nНедостаточно товара в магазине')
+                 print('\nНедостаточно товара в магазине')
         else:
             print('\nТакой игрушки нет в магазине')
 
