@@ -51,21 +51,26 @@ while True:
                 quantity = input("Введите количество игрушек: ")
                 if quantity.isdigit():
                     quantity = int(quantity)
-
                     break
                 else:
                     print("Вы ввели неверное значение")
 
             if quantity <= toy_store[toy_name][2]:
                 total_price = quantity * toy_store[toy_name][1]
-                print('\nС вас: ', total_price, 'рублей\nОплатить?\n\n1. Да\n 2. Нет\n\nВведите свой вариант: ')
-                q = input()
-                if q == '1':
-                    print('\n\nПокупка совершена успешно')
-                elif q =='2':
-                    print('\n\nПокупка была отменена')
+                print('\nС вас: ', total_price, 'рублей\nОплатить?\n\n1. Да\n 2. Нет')
+                while True:
+                    q = input("\n\nВведите свой вариант: ")
+                    if q.isdigit():
+                        q = int(q)
+                        if q == 1:
+                            print('\n\nПокупка совершена успешно')
+                        elif q == 2:
+                            print('\n\nПокупка была отменена')
+                        break
+                    else:
+                        print("Вы ввели неверное значение")
             else:
-                 print('\nНедостаточно товара в магазине')
+                print('\nНедостаточно товара в магазине')
         else:
             print('\nТакой игрушки нет в магазине')
 
