@@ -1,15 +1,4 @@
 def find_positive_line():
-    # sum = 0
-    # for d in range(n):
-    #     if sum != 0:
-    #         break
-    #     for g in range(m):
-    #         if row[g] > 0:
-    #             sum += row[g]
-    # if sum == 0:
-    #     print('В данной матрице нет ни одной строки, где все элементы положительные')
-    # else:
-    #     print('Строка ', d + 1, ' - первая положительная строка в матрице\n\nСумма элементов этой строки: ', sum)
     for r in matrix:
         if all(row > 0 for row in r):
             print("Сумма первой положительной строки в матрице: ", sum(r))
