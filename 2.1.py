@@ -1,17 +1,17 @@
-def rankDetermine():
+def RankDetermine():
     while True:
-        number = input("Введите число, я посчитаю количество его разрядов: ")
-        if number.isdigit():
-            number = int(number)
+        try:
+            number = int(input("Введите целое число, я посчитаю количество его разрядов: "))
+            if number < 0:
+                number *= -1
             break
-        else:
-            print("Вы ввели неверное значение! Число должно быть целым")
+        except ValueError:
+            print("\nВы ввели неверное значение!\n")
     rank = 0
-    while number > 0:
+    while number != 0:
         rank += 1
         number //= 10
     print('Количество разрядов: ', rank)
 
-
-rankDetermine()
+RankDetermine()
 
