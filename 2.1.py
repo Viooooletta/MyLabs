@@ -1,4 +1,4 @@
-def RankDetermine():
+def rank_determine():
     while True:
         try:
             number = int(input("Введите целое число, я посчитаю количество его разрядов: "))
@@ -13,5 +13,5 @@ def RankDetermine():
         number //= 10
     print('Количество разрядов: ', rank)
 
-RankDetermine()
+rank_determine()
 
