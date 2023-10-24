@@ -1,6 +1,6 @@
 import json
 
-file = open('data/Данне о фирме.txt', 'r', encoding='utf-8')
+file = open('data/Данные о фирме.txt', 'r', encoding='utf-8')
 
 lines = file.readlines()
 
