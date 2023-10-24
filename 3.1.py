@@ -14,7 +14,6 @@ for line in F1:
     if len(words) == 1:
         F2.write(line)
 F2.close()
-F1.close()
 
 F1 = open('data/F1.txt', 'r')
 F2 = open('data/F2.txt', 'r')
