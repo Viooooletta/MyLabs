@@ -3,7 +3,7 @@ file = open('data/Вокзал.txt', 'r', encoding='utf-8')
 AllTransportInf = file.readlines()
 find = 0
 SuitableTransports = []
-print('Это все билеты, которые стоят меньше 50 рублей:')
+print('Это все билеты, которые стят меньше 50 рублей:')
 
 for line in AllTransportInf:
     TrainNum, city, day, time, price = line.split()
