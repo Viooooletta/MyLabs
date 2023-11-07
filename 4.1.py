@@ -21,7 +21,7 @@ class Triangle:
         perimeter = self.FirstSide + self.SecondSide + self.TherdSide
         print("Периметр данного треугольника: ", perimeter, end="\n")
 
-print("\n")
+print("\n"
 Triangle1 = Triangle()
 Triangle1.SetData(5, 6,7)
 Triangle1.IsItTriangle()
